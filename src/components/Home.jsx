@@ -22,9 +22,13 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <div className="home" hidden={!this.state.isShown}>
-                    <img src={logo} alt="logo"/>
-                    <Button className="mt-3" color="primary" block onClick={this.handleClick}>Enter</Button>
+                <div hidden={!this.state.isShown}>
+                    <h1 className="title">-S<strike>O</strike>S-</h1>
+                    <div className="home">
+                        <img src={logo} alt="logo" />
+                        <div className="gamesettings">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                        <Button className="mt-3 btn btn-primary btn-lg" color="primary" block onClick={this.handleClick}>Play</Button>
+                    </div>
                 </div>
                 <div className="settings-container" hidden={this.state.isShown}>
                     <Settings />

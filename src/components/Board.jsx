@@ -179,14 +179,13 @@ class Board extends Component {
         }
 
         return (
-            <div>
-                <div className="s">
-                    <div className="status"><h4>{status}</h4> {this.renderToggleLetter()}</div>
-                    <div>
-                        <h5>Scores</h5>
-                        <div className="score">{playerOneScore}</div>
-                        <div className="score">{playerTwoScore}</div>
+            <div className="status-container">
+                <div>
+                    <div className="score" class="row">
+                        <div class="column" className="score-p1">{playerOneScore}</div>
+                        <div class="column" className="score-p2">{playerTwoScore}</div>
                     </div>
+                    <div className="status"><h1>{status}</h1> <div className="gap">{this.renderToggleLetter()}&nbsp;&nbsp;<div className="letter">{this.state.isLetterS ? 'S' : 'O'}</div></div></div>
                 </div>
                 <div className="game">
                     <div className="board">{board}</div>

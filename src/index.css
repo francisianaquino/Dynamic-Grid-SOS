@@ -1,7 +1,18 @@
+@font-face{
+  font-family: 'Comic Neue Oblique';
+  src: url(./font/ComicNeue_Oblique.otf);
+}
+
+@font-face{
+  font-family: 'Comic Neue Angular Bold';
+  src: url(./font/ComicNeue-Angular_Bold.otf);
+}
+
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
   margin: 20px;
-  background-image: url(./img/bg1.jpg);
+  background-image: url(./img/last-bg.png);
+  background-size:100%;
 }
 
 .settings-container {
@@ -27,18 +38,85 @@ ol, ul {
 }
 
 .square {
-  background: #fff;
-  border: 1px solid #999;
+  background: #999;
+  border: 1px solid #fff;
+  border-radius: 7px;
   float: left;
-  font-size: 24px;
+  font-size: 50px;
   font-weight: bold;
   line-height: 34px;
-  height: 34px;
+  height: 72px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 72px;
+  font-family: 'Comic Neue Angular Bold';
+  color: #fff;
+text-shadow: 1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000,
+    0px 1px 0 #000,
+    0px -1px 0 #000,
+    -1px 0px 0 #000,
+    1px 0px 0 #000,
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0px 2px 0 #000,
+    0px -2px 0 #000,
+    -2px 0px 0 #000,
+    2px 0px 0 #000,
+    1px 2px 0 #000,
+    -1px 2px 0 #000,
+    1px -2px 0 #000,
+    -1px -2px 0 #000,
+    2px 1px 0 #000,
+    -2px 1px 0 #000,
+    2px -1px 0 #000,
+    -2px -1px 0 #000;
+}
+
+.letter {
+  background: rgb(75, 3, 117);
+  border: 1px solid #fff;
+  border-radius: 7px;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 45px;
+  height: 50px;
+  width: 50px;
+  font-family: 'Comic Neue Angular Bold';
+  color: #fff;
+  display: inline-flex;
+  flex-direction: column;
+  text-align: center;
+text-shadow: 1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000,
+    0px 1px 0 #000,
+    0px -1px 0 #000,
+    -1px 0px 0 #000,
+    1px 0px 0 #000,
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0px 2px 0 #000,
+    0px -2px 0 #000,
+    -2px 0px 0 #000,
+    2px 0px 0 #000,
+    1px 2px 0 #000,
+    -1px 2px 0 #000,
+    1px -2px 0 #000,
+    -1px -2px 0 #000,
+    2px 1px 0 #000,
+    -2px 1px 0 #000,
+    2px -1px 0 #000,
+    -2px -1px 0 #000;
 }
 
 .square:focus {
@@ -52,7 +130,7 @@ ol, ul {
 .board {
   display: inline-flex;
   flex-direction: column;
-  padding: 10px;
+  padding: 50px;
 }
 
 .game-info {
@@ -64,14 +142,181 @@ ol, ul {
 }
 
 .home {
+  font-family: 'Comic Neue Angular Bold';
+  font-size: 72px;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  color: #fff;
 }
 
-/* .gameplay {
-  background: rgb(255, 255, 255);
-} */
+.title {
+  font-family: 'Comic Neue Angular Bold';
+  font-size: 72px;
+  padding-top: 200px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000,
+    0px 1px 0 #000,
+    0px -1px 0 #000,
+    -1px 0px 0 #000,
+    1px 0px 0 #000,
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0px 2px 0 #000,
+    0px -2px 0 #000,
+    -2px 0px 0 #000,
+    2px 0px 0 #000,
+    1px 2px 0 #000,
+    -1px 2px 0 #000,
+    1px -2px 0 #000,
+    -1px -2px 0 #000,
+    2px 1px 0 #000,
+    -2px 1px 0 #000,
+    2px -1px 0 #000,
+    -2px -1px 0 #000;
+filter: invert();
+}
 
-/* * {border:1px solid red} */
+ .gameplay {
+  padding: 50px;
+  background-image: url(./img/first-bg+c.png);
+  font-family: 'Comic Neue Oblique';
+  font-size: 20px;
+  color: #fff;
+  border-radius: 25px;
+}
+
+.gamesettings {
+  font-family: 'Comic Neue Angular Bold';
+  color: #fff;
+  font-size: 32px;
+text-shadow: 1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000,
+    0px 1px 0 #000,
+    0px -1px 0 #000,
+    -1px 0px 0 #000,
+    1px 0px 0 #000,
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0px 2px 0 #000,
+    0px -2px 0 #000,
+    -2px 0px 0 #000,
+    2px 0px 0 #000,
+    1px 2px 0 #000,
+    -1px 2px 0 #000,
+    1px -2px 0 #000,
+    -1px -2px 0 #000,
+    2px 1px 0 #000,
+    -2px 1px 0 #000,
+    2px -1px 0 #000,
+    -2px -1px 0 #000;
+}
+
+.gamesettings2 {
+  padding: 40px;
+  font-family: 'Comic Neue Angular Bold';
+  background-image: url(./img/first-bg+c2.png);
+  color: #fff;
+  font-size: 30px;
+text-shadow: 1px 1px 0 #000,
+    -1px 1px 0 #000,
+    1px -1px 0 #000,
+    -1px -1px 0 #000,
+    0px 1px 0 #000,
+    0px -1px 0 #000,
+    -1px 0px 0 #000,
+    1px 0px 0 #000,
+    2px 2px 0 #000,
+    -2px 2px 0 #000,
+    2px -2px 0 #000,
+    -2px -2px 0 #000,
+    0px 2px 0 #000,
+    0px -2px 0 #000,
+    -2px 0px 0 #000,
+    2px 0px 0 #000,
+    1px 2px 0 #000,
+    -1px 2px 0 #000,
+    1px -2px 0 #000,
+    -1px -2px 0 #000,
+    2px 1px 0 #000,
+    -2px 1px 0 #000,
+    2px -1px 0 #000,
+    -2px -1px 0 #000;
+    color: #fff;
+    border-radius: 25px;
+    border: 5px solid rgba(0, 0, 0, 1);
+}
+
+.space {
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.space1 {
+  padding: 20px;
+  background-image: url(./img/first-bg.png);
+  box-shadow: 0 0 8px 8px rgba(0, 0, 0, 0.2) inset
+}
+
+.status-container {
+  font-family: 'Comic Neue Angular Bold';
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 1px 0 rgb(0, 0, 0),
+  -1px 1px 0 #000,
+  1px -1px 0 #000,
+  -1px -1px 0 #000,
+  0px 1px 0 #000,
+  0px -1px 0 #000,
+  -1px 0px 0 #000,
+  1px 0px 0 #000,
+  2px 2px 0 #000,
+  -2px 2px 0 #000,
+  2px -2px 0 #000,
+  -2px -2px 0 #000,
+  0px 2px 0 #000,
+  0px -2px 0 #000,
+  -2px 0px 0 #000,
+  2px 0px 0 #000,
+  1px 2px 0 #000,
+  -1px 2px 0 #000,
+  1px -2px 0 #000,
+  -1px -2px 0 #000,
+  2px 1px 0 #000,
+  -2px 1px 0 #000,
+  2px -1px 0 #000,
+  -2px -1px 0 #000;
+}
+
+.score-p2{
+  padding-right: 50px;
+color: lightskyblue;
+}
+
+.score-p1{
+  padding-left: 50px;
+  padding-right: 700px;
+ color: lightcoral;
+}
+
+.winner{
+  font-size: 50px;
+  background-color: rgba(75, 3, 117, 0.5);
+}
+
+.gap{
+  padding-left: 50px;
+  line-height: 60px;
+}
