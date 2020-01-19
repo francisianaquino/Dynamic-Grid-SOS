@@ -29,7 +29,7 @@ class Settings extends Component {
     }
 
     handleClick() {
-        if (this.state.numberOfRows >= 3 || this.state.numberOfColumns >= 3) {
+        if (this.state.numberOfRows >= 3 && this.state.numberOfColumns >= 3) {
             this.setState({
                 isBoardShown: true,
             });
